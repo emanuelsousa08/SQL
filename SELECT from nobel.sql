@@ -23,3 +23,18 @@ WHERE (subject = 'physics' AND yr = 1980) OR (subject = 'chemistry' AND yr = 198
 
 SELECT yr, subject, winner FROM nobel  
 WHERE yr = 1980 AND subject NOT IN ('Chemistry', 'Medicine')
+
+SELECT yr, subject, winner FROM nobel
+WHERE (subject = 'medicine' AND yr < 1910) OR (subject = 'literature' AND yr >= 2004)
+
+SELECT * FROM nobel
+WHERE winner = 'PETER GRÜNBERG'
+
+SELECT * FROM nobel
+WHERE winner = "eugene o'neill"
+
+SELECT winner, yr, subject FROM nobel  
+WHERE winner LIKE 'Sir %' ORDER BY yr DESC, winner ASC
+
+SELECT winner, subject FROM nobel
+ WHERE yr=1984 ORDER BY subject IN ('physics','chemistry'),subject,winner
